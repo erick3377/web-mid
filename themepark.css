@@ -1,0 +1,168 @@
+*{
+	box-sizing: border-box;
+}
+
+/* CSS code for the header section */
+
+header{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+#hdrlt, #hdrcenter,#hdrrt{
+	display: flex;
+	align-items: center;
+	width: 33%;
+}
+
+#hdrlt{
+	justify-content: flex-start;
+}
+
+#hdrcenter{
+	justify-content: center;
+}
+
+#hdrrt{
+	justify-content: flex-end;
+}
+
+#Contacts, #Hrscalender, #hdrcenter{
+	float: left;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+#signin, #search, #Cart{
+	margin-right: 10px;
+}
+
+#Contacts:hover, #Hrscalender:hover, #signin:hover, #search:hover, #Cart:hover{
+	text-decoration: underline;
+	color: goldenrod;
+}
+
+/* CSS code for the attractions section */
+
+@keyframes maincarrousel{
+	0% {background-image: url("images/ferriswheel.jpeg");}
+	25%{background-image: url("images/carrousel.jpeg");}
+	50%{background-image: url("images/waterpark.jpeg");}
+	75%{background-image: url("images/haunted.jpeg");}
+}
+
+#attractioncarrousel{
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: goldenrod;
+	width: 100%;
+	height: 500px;
+	background-image: url("images/ferriswheel.jpeg");
+	animation-name: maincarrousel;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: backwards;
+}
+#adults, #entirefamily, #scare {
+	border-color: orangered;
+	border-width: 10px;
+}
+
+#adults:hover, #entirefamily:hover, #scare:hover {
+	color: white;
+	flex-grow: 3;
+	text-align:center;
+	vertical-align: middle;
+	align-self: stretch;
+}
+
+#adults:hover {
+	background-image: url("images/rollercoaster.jpeg");
+}
+
+#entirefamily:hover {
+	background-image: url("images/bumpercars.jpeg");
+}
+
+#scare:hover {
+	background-image: url("images/scare.jpeg");
+}
+
+/*CSS code for the accomodation section */
+
+.sectionheading{
+	text-align: center;
+	color: goldenrod;
+}
+
+#accomodation{
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 50px;
+}
+#headingaccomodation{
+	text-align: center;
+	vertical-align: center;
+}
+
+.flip-card{
+	width: 500px;
+	height: 755px;
+	perspective: 500px;
+}
+
+.flip-card-inner{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: transform 3s;
+	transform-style: preserve-3d;
+	box-shadow: 0,4px,8px,0, rgba(0, 0, 0, 1.0);
+
+}
+
+.flip-card:hover .flip-card-inner{
+	transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility:  hidden;
+	backface-visibility: hidden;
+}
+
+.flip-card-back {
+	color: white;
+	background-color: goldenrod;
+	transform: rotateY(180deg);
+}
+
+/* CSS for the ticket section  */
+#tickets {
+	display: flex;
+	justify-content: space-between;
+}
+
+@keyframes ticketsmigrating {
+	0%{left: 0px;}
+	25%{left: 250px;}
+	50%{left: 500px;}
+	75%{left: 750px;}
+}
+#migrating{
+	background-color:transparent;
+	border-width: 10px;
+	border-color: goldenrod;
+	width: 300px;
+	height: 200px;
+	position: relative;
+	animation-name: ticketsmigrating;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+}
