@@ -1,6 +1,9 @@
 *{
 	box-sizing: border-box;
 }
+body{
+	margin: 0;
+}
 
 /* CSS code for the header section */
 
@@ -165,4 +168,65 @@ header{
 	animation-name: ticketsmigrating;
 	animation-duration: 30s;
 	animation-iteration-count: infinite;
+}
+/*********************************************
+FOOTER STYLE - Erick Gonzalez
+*********************************************/
+footer{
+	background-color: #000080;
+	color: white;
+}
+
+footer .container{
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-evenly;
+}
+
+footer .container .block{
+	margin: 0px 40px 0px 20px;
+}
+
+footer a{
+	color: white;
+	text-decoration: none;
+}
+
+footer a:hover{
+	color: gray;
+}
+
+footer h3{
+	font-style: italic;
+	text-decoration: underline;
+}
+
+footer img{
+	
+	width:30px;
+	margin: 5px 0px;
+}
+
+footer img:hover{
+	animation-name: zoom;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+@keyframes zoom{
+	from{width: 30px;}
+	to{width: 40px;}
+}
+
+footer #copyright{
+	text-align: center;
+	font-size: 12px;
+	padding: 20px;
+	margin:0
+}
+
+@media only screen and (max-width: 890px) {
+	footer .container {
+	  justify-content: unset;
+	}
 }
