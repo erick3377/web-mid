@@ -1,9 +1,6 @@
 *{
 	box-sizing: border-box;
 }
-body{
-	margin: 0;
-}
 
 /* CSS code for the header section */
 
@@ -172,10 +169,18 @@ header{
 /*********************************************
 FOOTER STYLE - Erick Gonzalez
 *********************************************/
+
+/* This body tag makes looks nice my presentation 
+but it might clash with others, so keep an eye on this */
+body{
+	margin: 0;
+}
+
 footer{
 	background-color: #000080;
 	color: white;
 }
+/* Block containing all footer the cards */
 
 footer .container{
 	display: flex;
@@ -207,6 +212,7 @@ footer img{
 	margin: 5px 0px;
 }
 
+/* Animation for Social Media Icons */
 footer img:hover{
 	animation-name: zoom;
 	animation-duration: 1s;
